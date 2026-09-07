@@ -1,0 +1,33 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Install frontend dependencies
+        working-directory: app
+        run: npm ci
+      - name: Build frontend
+        working-directory: app
+        run: npm run build
+      - name: Check backend
+        working-directory: backend
+        run: cargo check --workspace --locked
+      - name: Test desktop and Discord discovery
+        working-directory: app/src-tauri
+        run: cargo test --lib --locked

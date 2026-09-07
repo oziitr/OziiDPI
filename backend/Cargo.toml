@@ -1,0 +1,8 @@
+﻿[workspace]
+members = [
+    "crates/ozii-core",
+    "crates/ozii-cli"
+]
+resolver = "2"
+
+

@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "OziiDPI Chrome",
+  "version": "1.1.0",
+  "description": "Normal Chrome profilini OziiDPI yerel tüneline güvenle bağlar.",
+  "author": "ozii",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy1wBmEoUu5gmT2hTKu5brBA2QUeHEgtm+nyJ987GjV3bwOBNi1FLi0PLzTwkiRrSCVV0i8Rci7q7EWOhFvGJiSps6wlS2QF/f9zkFdR05Zoyvzu+OypopxRSRBc2N+HmzkUeP8G8vnDckNh2Q6dl9XE3xIEfAGGpl0Xa8hHLHeFdZC6UdkceVeoji9EdIuWgG7XBjyCZYQBzqqQ2K0iwfUYt2UzUFemZeyZ9grPaUExz3IdrofS0mbAr3aiUxrPW3WdXTu4ECd7DLX+wUP/woztTqaEQww9eLbBbPznrstMCZY05l4JmAC+YxMZDkFW5C9CbnoL71rtXwwvb6MNVHQIDAQAB",
+  "minimum_chrome_version": "105",
+  "permissions": [
+    "nativeMessaging",
+    "proxy"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "OziiDPI normal Chrome tüneli"
+  }
+}
+

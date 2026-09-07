@@ -1,0 +1,10 @@
+{
+  "name": "com.ozii.dpi",
+  "description": "OziiDPI Chrome bağlantısı",
+  "path": "OziiDPI.exe",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://dbfgpihnpfgemiffdbkeeolpfammcjgg/"
+  ]
+}
+
